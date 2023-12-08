@@ -1,0 +1,37 @@
+.footer_box {
+  margin: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_box a {
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.footer_box a:hover {
+  color: #cecece;
+}
+
+.footer_box-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_box-subtitle {
+  text-align: left;
+  color: var(--Orange, #f2994a);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+.footer_box-icons {
+  display: flex;
+  gap: 20px;
+}

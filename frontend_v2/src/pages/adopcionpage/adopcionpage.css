@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+.adopcion_container-main-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 57px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.adopcion_container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.adopcion_formulario {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.adopcion_formulario_one-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+}
+
+.adopcion_formulario_one-box div {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.adopcion_formulario_one-box span {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: 0.75px;
+}
+
+.adopcion_formulario_one-box input {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 36.5px;
+  border: none;
+  background: #eff0f6;
+  font-size: 20px;
+}
+
+.adopcion_formulario_two-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+}
+
+.adopcion_formulario_two-box div {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.adopcion_formulario_two-box input {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 36.5px;
+  border: none;
+  background: #eff0f6;
+  font-size: 20px;
+}
+
+.adopcion_formulario_two-box select {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 36.5px;
+  border: none;
+  background: #eff0f6;
+  font-size: 20px;
+}
+
+.adopcion_formulario_two-box span {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: 0.75px;
+}
+
+@media screen and (max-width: 800px) {
+  .adopcion_container {
+    height: auto;
+    padding-top: 120px;
+  }
+
+  .adopcion_formulario_one-box {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.perrofeliz-adop {
+  max-width: 100px;
+  margin-top: 20px;
+}
+
+.adopcion_formulario_two-box-img {
+  display: flex;
+
+  align-items: center;
+}

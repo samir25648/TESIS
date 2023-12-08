@@ -1,0 +1,65 @@
+.checkout_container {
+  margin: auto;
+  width: 100%;
+  max-width: 1250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout_main-box {
+  padding: 3rem;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.checkout_main-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  gap: 60px;
+}
+
+.cards-brands div {
+  display: flex;
+  flex-direction: column;
+}
+.checkout_main-form_info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.note {
+  max-width: 400px;
+}
+
+.checkout_main-form_inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.checkout_main-form_inputs div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.checkout_main-form_inputs div input {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 36.5px;
+  border: none;
+  background: #eff0f6;
+  font-size: 20px;
+}

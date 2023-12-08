@@ -1,0 +1,45 @@
+.navbar-container {
+  justify-content: space-between;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background-color: #ffa500;
+  padding: 0 20px;
+}
+.navbar-container a {
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-container a:hover {
+  color: #242424;
+}
+
+.navbar-container_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container_links img {
+  cursor: pointer;
+}
+
+.navbar-container_links div {
+  gap: 10px;
+  display: flex;
+}
+
+.nav-container_auth {
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.navbar-container_link-mobile {
+  display: none;
+}
