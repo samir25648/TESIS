@@ -18,28 +18,41 @@ export class RegisterDogHttpController {
   @Post('dogme')
   async listme(@Body() listDto: { id: string; type: string }) {
     const data = await this.dogRepository.findAdoptados(listDto);
+<<<<<<< Updated upstream
     console.log(data);
+=======
+>>>>>>> Stashed changes
     return data;
   }
 
   @Post('search')
   async search(@Body() search: { id: string }) {
+<<<<<<< Updated upstream
     console.log(search);
     const data = await this.dogRepository.findBy(search.id);
     console.log(data);
+=======
+    const data = await this.dogRepository.findBy(search.id);
+>>>>>>> Stashed changes
     return data;
   }
 
   @Get('dog')
   async list() {
     const data = await this.dogRepository.find();
+<<<<<<< Updated upstream
     console.log(data);
+=======
+>>>>>>> Stashed changes
     return data;
   }
 
   @Post('adoptar')
   async adoptar(@Body() adoptarDto: { id: string; id_user: string }) {
+<<<<<<< Updated upstream
     console.log(adoptarDto);
+=======
+>>>>>>> Stashed changes
     this.dogRepository.adopaar(adoptarDto);
   }
 

@@ -1,0 +1,47 @@
+
+
+
+.adoptado_container {
+  height:  100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_box_adoptado {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main_box_adoptado .description {
+  gap: 20px;
+  border-radius: 12px;
+  padding: 2rem;
+  background-color: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.desc_box {
+  height: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 20px;
+}
+
+.desc_box div {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-red {
+  background-color: red;
+  color: #fff;
+  align-self: center;
+
+}

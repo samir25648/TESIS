@@ -28,12 +28,10 @@ export const RegisterPage = () => {
       body: JSON.stringify(form)
     })
     .then(async (res) => {
-      console.log(res)
       if(res.ok) {
         const data = await res.json()
         navigate('/')
         location.reload()
-        console.log(data)
         localStorage.setItem('user', JSON.stringify(data))
       }
     })

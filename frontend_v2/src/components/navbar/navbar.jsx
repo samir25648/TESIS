@@ -30,7 +30,7 @@ export const NavBar = () => {
             <Link to={"/inscripciondic"}>Inscripcion DIC</Link>
           }
           <Link to={"/adopcion"}>Poner Perro en Adopcion</Link>
-          <Link to={"/nosotros"}>Sobre Nosotros</Link>
+          <Link to={"/sobrenosotros"}>Sobre Nosotros</Link>
           {
            user && <Link to={"/listaadoptados"}>Perros adoptados</Link>
           }

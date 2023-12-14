@@ -24,16 +24,31 @@ export class DogRepository {
   }
 
   async find(): Promise<DogEntity[]> {
+<<<<<<< Updated upstream
     return await this.dogRepository.find();
   }
   async findBy(id: string): Promise<DogEntity> {
     const data = await this.dogRepository.findOne({ _id: id });
+=======
+    const data = await this.dogRepository.find({ id_user: null });
+>>>>>>> Stashed changes
     console.log(data);
     return data;
   }
 
+<<<<<<< Updated upstream
   async create(dog: DogEntity): Promise<void> {
     await this.dogRepository.create(dog);
+=======
+  async findBy(id: string): Promise<DogEntity> {
+    const data = await this.dogRepository.findOne({ _id: id });
+    return data;
+  }
+
+  async create(dog: DogEntity): Promise<DogEntity> {
+    const data = await this.dogRepository.create(dog);
+    return data;
+>>>>>>> Stashed changes
   }
 
   async passToDic(id: string): Promise<void> {

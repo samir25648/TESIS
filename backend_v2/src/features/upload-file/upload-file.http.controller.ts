@@ -16,7 +16,10 @@ export class UploadFileHttpController {
   async execute(
     @UploadedFile() file: Express.Multer.File,
   ): Promise<{ url: string }> {
+<<<<<<< Updated upstream
     console.log(file);
+=======
+>>>>>>> Stashed changes
     return await this.uploadImageUseCase.execute(file);
   }
 }

@@ -11,6 +11,8 @@ import {RegisterPage} from './pages/registerpage/registerpage'
 import { PerrosAdoptados } from "./pages/perrosadoptados/perrosadoptados";
 import {ListarDics} from './pages/listardics/listardics'
 import { AccederPage } from "./pages/acceder/acceder";
+import { SobreNosotros } from "./pages/sobrenosotros/sobrenosotros";
+import { VerDic } from "./pages/verdic/verdic";
 
 const router = createBrowserRouter([
   {
@@ -95,6 +97,23 @@ const router = createBrowserRouter([
       <>
       <NavBar/>
       <AccederPage/>
+      </>
+    )
+  }, {
+    path: '/sobrenosotros',
+    element: (
+      <>
+        <NavBar/>
+        <SobreNosotros/>
+        <Footer/>
+      </>
+    )
+  },{
+    path: '/dic/:id',
+    element: (
+      <>
+        <NavBar/>
+        <VerDic/>
       </>
     )
   }

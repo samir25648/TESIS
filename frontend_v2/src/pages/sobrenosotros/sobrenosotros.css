@@ -1,0 +1,24 @@
+.sobre-nosotros-box{
+  height: 100%;
+  margin-top: 140px;
+  color: #fff;
+}
+
+.subbox {
+  height: 80%;
+  background-color: #fff;
+  color: black
+}
+
+.header-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.subbox p {
+  text-align: left;
+  font-size: 30px;
+  padding: 4rem;
+  font-weight: bold;
+}

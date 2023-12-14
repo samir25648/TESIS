@@ -34,7 +34,10 @@ export class UploadFileUseCase {
         url: `https://${this.AWS_S3_BUCKET}.s3.amazonaws.com/${key}`,
       };
     } catch (e) {
+<<<<<<< Updated upstream
       console.log(e);
+=======
+>>>>>>> Stashed changes
       throw new HttpException('No se pudo subi la image', 403);
     }
   }

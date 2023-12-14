@@ -10,7 +10,11 @@ export class RegisterDicUseCase {
     await this.dogRepository.create({
       type: '2',
       genero: registerDog.genero,
+<<<<<<< Updated upstream
       contacto: '',
+=======
+      contacto: registerDog.contacto,
+>>>>>>> Stashed changes
       id_user: registerDog.id_user,
       anos: registerDog.anos,
       vacunado: registerDog.vacunado,

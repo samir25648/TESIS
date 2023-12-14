@@ -13,6 +13,21 @@ export function ListaAdopcionPage() {
       .then((res) => setDogs(res));
   }, []);
 
+  const adoptar = (id) => {
+    const user = JSON.parse(localStorage.getItem('user'))
+    fetch('http://localhost:3000/adoptar', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({id: id, id_user: user.id})
+    })
+    .then(() =>{
+      setDogs(prev => prev.filter(e => e._id !== id))
+    })
+
+  }
+
   return (
     <div className="listaadop-container">
       <Table striped bordered>
@@ -39,7 +54,7 @@ export function ListaAdopcionPage() {
                 <td>{dog.contacto}</td>
                 <td>
                   <span onClick={() => navigate('/adoptado/'+dog._id)} className='btn'>Ver</span> {' '}
-                  <span className='btn'>Adoptar</span>
+                  <span onClick={() => adoptar(dog._id)} className='btn'>Adoptar</span>
                 </td>
               </tr>
             ))

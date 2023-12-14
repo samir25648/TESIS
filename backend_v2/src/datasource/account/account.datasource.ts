@@ -19,7 +19,10 @@ export class AccountRepository {
     const response = await this.findBy({
       _id: data._id.toString(),
     });
+<<<<<<< Updated upstream
     console.log(response);
+=======
+>>>>>>> Stashed changes
 
     if (response === null) {
       throw new HttpException('erro al crear el usuario', 403);
@@ -32,7 +35,10 @@ export class AccountRepository {
       { _id: id as string },
       { isPay: true },
     );
+<<<<<<< Updated upstream
     console.log(await this.findBy({ _id: id }));
+=======
+>>>>>>> Stashed changes
     return await this.findBy({ _id: id });
   }
 }

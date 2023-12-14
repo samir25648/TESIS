@@ -16,7 +16,11 @@ export class RegisterDogUseCase {
       genero: registerDog.genero,
       image: registerDog.image,
       contacto: registerDog.contacto,
+<<<<<<< Updated upstream
       id_user: registerDog.id_user,
+=======
+      id_user: null,
+>>>>>>> Stashed changes
     });
   }
 }

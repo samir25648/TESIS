@@ -6,7 +6,7 @@ export const CheckoutPage = () => {
   const toPay = () => {
     const user = JSON.parse(localStorage.getItem('user'))
 
-    fetch('http://localhost:3000/account/pay/'+user._id ,{
+    fetch('http://localhost:3000/account/pay/'+user.id ,{
       method: 'POST',
     })
     .then(res => res.json())

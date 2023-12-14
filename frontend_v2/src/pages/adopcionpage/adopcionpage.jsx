@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./adopcionpage.css";
 import Toastify from 'toastify-js'
+import { useNavigate } from "react-router-dom";
 
 export const AdopcionPage = () => {
   const [form, setForm] = useState({
@@ -13,6 +14,7 @@ export const AdopcionPage = () => {
     dueno: '',
   })
   const [image, setImage] = useState(null)
+  const navegate = useNavigate() 
 
   const onChange = (e) => {
     setForm(prev => ({
@@ -33,13 +35,12 @@ export const AdopcionPage = () => {
     } 
     const url = await uploadFile(image[0])
 
-    const user = JSON.parse(localStorage.getItem('user'))
     const response = await fetch('http://localhost:3000/register-dog', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({...form, image: url, id_user: user._id})
+      body: JSON.stringify({...form, image: url})
     })
     if(response.ok) {
       Toastify({
@@ -47,6 +48,8 @@ export const AdopcionPage = () => {
         text: 'Mastoca Registrada corrrectamente',
         duration: 3000,
       }).showToast()
+      navegate('/dogs')
+      location.reload()
     }else{
       Toastify({
         duration: 3000,
@@ -58,7 +61,6 @@ export const AdopcionPage = () => {
 
   const uploadFile = async (file) => {
     const formData = new FormData()  
-    console.log(file)
     formData.append('file', file)
 
     const response = await fetch('http://localhost:3000/upload/file', {

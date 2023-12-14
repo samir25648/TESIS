@@ -30,11 +30,11 @@ export const PerrosAdoptados = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ id: user._id, type: "1"})
+      body: JSON.stringify({ id: user.id, type: "1"})
     })
       .then((res) => res.json())
       .then((res) => setDogs(res));
-  }, [user._id]);
+  }, [user.id]);
 
   return (
     <div className="perrosadoptados-container">

@@ -26,7 +26,6 @@ export function ListarDics() {
   }
   const uploadFile = async (file) => {
     const formData = new FormData()  
-    console.log(file)
     formData.append('file', file)
 
     const response = await fetch('http://localhost:3000/upload/file', {
@@ -55,15 +54,16 @@ export function ListarDics() {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({...form, image: url, id_user: user._id})
+      body: JSON.stringify({...form, image: url, id_user: user.id})
     })
     if(response.ok) {
-      setDogs(prev => [...prev, {...form, image: url, id_user: user._id}])
+      setDogs(prev => [...prev, {...form, image: url, id_user: user.id}])
       Toastify({
         close: true,
         text: 'Mastoca Registrada corrrectamente',
         duration: 3000,
       }).showToast()
+      location.reload()
     }else{
       Toastify({
         duration: 3000,
@@ -78,14 +78,14 @@ export function ListarDics() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ id: user._id, type: "2"})
+      body: JSON.stringify({ id: user.id, type: "2"})
 
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res)
+        setDogs(res)
       });
-  }, [user._id]);
+  }, [user.id]);
 
   return (
     <div className="listadic-container">
@@ -124,7 +124,7 @@ export function ListarDics() {
         </div>
         <span onClick={onSubmit} className='btn submit'>Añadir</span>
       </div>
-      <Table striped bordered>
+      <Table className='table' striped bordered>
         <thead>
           <tr>
             <th>nombre</th>
@@ -147,7 +147,7 @@ export function ListarDics() {
                 <td>{dog.genero}</td>
                 <td>{dog.contacto}</td>
                 <td>
-                  <span onClick={() => navigate('/adoptado/'+dog._id)} className='btn'>Ver</span> {' '}
+                  <span onClick={() => navigate('/dic/'+dog._id)} className='btn'>Ver</span> {' '}
                 </td>
               </tr>
             ))

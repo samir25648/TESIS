@@ -1,11 +1,10 @@
-import './adoptados.css'
+import './verdic.css'
 import { useEffect, useState } from "react";
 import Toastify from 'toastify-js'
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
-export const Adoptados = () => {
+export const VerDic = () => {
   const { id } = useParams();
-  const navegate = useNavigate()
   const [dog, setDog] = useState({
     id: '',
     nombre: '',
@@ -31,27 +30,12 @@ export const Adoptados = () => {
     })
   }, [id])
 
-  const adotame = () => {
-    const user = JSON.parse(localStorage.getItem('user'))
-
-    console.log(user)
-    fetch('http://localhost:3000/adoptar', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ id: dog._id, id_user: user.id })
-    })
-    .then(res => {
-      if(res.ok) {
-        Toastify({
-          close: true,
-          text: 'Perro Adoptado correctamente',
-          duration: 3000,
-        }).showToast()
-        navegate('/listaadoptados')
-      }
-    })
+  const perdido = () => {
+    Toastify({
+      close: true,
+      text: 'Perro reportado como perdido!',
+      duration: 3000,
+    }).showToast()
   }
 
   return (
@@ -73,7 +57,7 @@ export const Adoptados = () => {
               <p>Contacto: {dog.contacto}</p>
             </div>
           </div>
-          <span onClick={adotame} className='btn'>adoptame</span>
+          <span onClick={perdido} className='btn btn-red'>Perdido!!</span>
         </div>
       </div>
     </div>
